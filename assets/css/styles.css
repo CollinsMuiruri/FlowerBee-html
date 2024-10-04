@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #022213;
+    color: white;
+    height: 100vh;
+    /* padding: 20px; */
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+}
+
+.sidebar-menu .menu-title{
+    font-size: 13px;
+    font-weight: 500;
+    padding-left: 25px;
+}
+
+.sidebar-menu li {
+    margin: 10px 0;
+}
+
+.sidebar-menu li a {
+    color: #CBCBCB;
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #033820;
+}
+
+.sidebar-menu li a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+.sidebar-bottom .company,
+.sidebar-bottom .profile{
+    padding-left: 20px;
+}
+
+.sidebar-bottom .company .company-name,
+.sidebar-bottom .profile .username{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sidebar-bottom .company .company-location,
+.sidebar-bottom .profile .profession{
+    font-size: 11px;
+    font-weight: 200;
+    color: #D5FF3B;
+}
+
+.sidebar-bottom .line{
+    margin: 10px 10px;
+}
+
+.sidebar-bottom .profile{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0px 15px;
+    gap: 10px;
+}
+
+.sidebar-bottom .profile img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 3px dashed #7CA127;
+}
+
+
+#active-list{
+    margin-left: -10px;
+}
+
+#active-link{
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+#active-link::before{
+    content: " ";
+    background-color: #D5FF3B;
+    padding: 18px 2.5px;
+    margin-left: -10px;
+    margin-right: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#active-link svg path{
+    fill: #D5FF3B;
+}
+
+.line{
+    height: 1px;
+    width: 160px;
+    background-color: #525252;
+    margin: 20px 10px;
+    border-radius: 100px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+nav .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .search-bar {
+    width: 500px;
+    padding: 5px 20px;
+    border: 1.5px solid #7CA127;
+    border-radius: 50px;
+    outline: none;
+    transition: border 0.3s ease;
+    transition: box-shadow 0.3s ease;
+}
+
+nav .search-bar:focus {
+    /* border-color: #022213; */
+    box-shadow: 0px 5px 17px -5px #7CA127;
+}
+
+#live-clock{
+    font-weight: bold;
+    align-self: flex-end;
+    font-size: 21px;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    width: 100%;
+}
+
+.page-name{
+    font-size: 25px;
+    font-weight: 800;
+    color: #022213;
+}
+
+.order-status-area{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.head-area{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.head-area svg:hover{
+    cursor: pointer;
+}
+
+.orders-status-section{
+    width: 300px;
+}
+
+.status-name{
+    font-weight: 800;
+}
+
+.order-card{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #0A7241;
+    border-radius: 8px;
+    background-color: #0A7241;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.order-card .order-card-left{
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.order-card .multi-line{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.order-card .multi-line .order-number,
+.order-card .multi-line .order-products-progress{
+    margin-bottom: 5px;
+}
+
+.multi-line .order-products-progress,
+.multi-line .order-assigned-progress{
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.multi-line .order-products-progress strong,
+.multi-line .order-assigned-progress strong{
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+
+.order-card .order-card-right{
+    height: 100%;
+    padding: 10px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.status-pending{
+    border: 2px solid #EFB200;
+}
+
+.status-progress-good{
+    border: 2px solid #0A7241;
+}
+
+.status-progress-bad{
+    border: 2px solid #720A0A;
+}
+
+.status-complete{
+    border: 2px solid #525252;
+}
+
+.status-cancelled{
+    background-color: #720A0A;
+}
+
+.not-accepted .order-card .order-card-left{
+    background-color: #022213;
+    width: 60%;
+}
+
+.not-accepted .order-card .order-card-right{
+    width: 40%;
+    padding: 20px;
+    background-color: #0A7241;
+    cursor: pointer;
+}
+
+.in-progress .order-card .order-card-left{
+    background-color: #022213;
+    width: 65%;
+}
+
+.in-progress .status-progress-good .order-card-right{
+    font-size: 15px;
+    background-color: #0A7241;
+}
+
+.in-progress .status-progress-bad .order-card-right{
+    font-size: 15px;
+    background-color: #720A0A;
+}
+
+.completed .order-card-right{
+    width: 40%;
+}
+
+.completed .status-progress-good .order-card-left{
+    background-color: #0A7241;
+}
+
+.completed .status-progress-bad .order-card-left{
+    background-color: #720A0A;
+}
+
+.completed .order-card-right{
+    background-color: #525252;
+}
+
