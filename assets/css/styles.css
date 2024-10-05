@@ -37,9 +37,10 @@ body {
 }
 
 .sidebar-menu .menu-title{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     padding-left: 25px;
+    letter-spacing: 3px;
 }
 
 .sidebar-menu li {
