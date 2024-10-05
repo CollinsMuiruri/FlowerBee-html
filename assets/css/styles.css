@@ -276,6 +276,8 @@ nav .search-bar:focus {
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 
