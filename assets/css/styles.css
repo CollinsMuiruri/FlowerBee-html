@@ -249,6 +249,10 @@ nav .search-bar:focus {
     padding: 10px;
 }
 
+.order-number{
+    cursor: pointer;
+}
+
 .order-card .multi-line .order-number,
 .order-card .multi-line .order-products-progress{
     margin-bottom: 5px;

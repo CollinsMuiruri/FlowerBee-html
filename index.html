@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlowerBee | Orders</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/order-modal.css">
 </head>
 <body>
     <div class="sidebar">
@@ -216,7 +217,49 @@
         </div>
     </div>
 
+<!-- Modal Structure -->
+<div id="modal-overlay" class="modal-overlay"></div>
+<div id="order-modal" class="modal">
+    <div class="modal-header">
+        <h2>Order Details</h2>
+        <span id="close-modal" class="close-modal">&times;</span>
+    </div>
+    <div class="modal-body">
+        <p class="modal-order-number"><strong>Order No. </strong> #AD_1234</p>
+        <p class="modal-order-source"><strong>Source: </strong> Admin</p>
+        <p class="modal-order-status"><strong>Status: </strong> Not Accepted</p>
+        <br>
+        <p class="modal-order-customer"><strong>Customer: </strong> Miriam Junet</p>
+        <p class="modal-order-customer-return">Return Customer</p>
+        <br>
+        <p><strong>Order: </strong> 3 Products
+        
+        <div class="full-product">
+            <img src="assets/images/DashingJoyHandbouquet.webp" alt="" srcset="" id="full-product-image">
+            <div class="product-card">
+                <div class="product-details">
+                    <div class="qty"><strong>1</strong></div>
+                    <div class="qty"><strong>x</strong></div>
+                    <div class="qty-name">
+                        <p class="name">Dashing Joy Hand Bouquet</p> 
+                        <div class="assignment">
+                            <p class="assignee">Kimani K.</p>
+                            <img src="assets/images/Green-Status.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-status">
+                    Ready In <br>
+                    20 Mins
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
     <script src="assets/js/live-time.js"></script>
+    <script src="assets/js/order-modal.js"></script>
 
 </body>
 </html>
